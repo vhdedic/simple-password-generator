@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Password Generator</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<h1>Simple Password Generator</h1>
+<form method="POST">
+  <h2>Include</h2>
+  <div>
+    <label for="lowerCases">
+      <input type="checkbox" id="lowerCases" name="lowerCases"> a, b, c ...
+    </label>
+  </div>
+  <div>
+    <label for="upperCases">
+      <input type="checkbox" id="upperCases" name="upperCases"> A, B, C ...
+    </label>
+  </div>
+  <div>
+    <label for="numbers">
+      <input type="checkbox" id="numbers" name="numbers"> 1, 2, 3 ...
+    </label>
+  </div>
+  <div>
+    <label for="specialChars">
+      <input type="checkbox" id="specialChars" name="specialChars"> #, $, % ...
+    </label>
+  </div>
+  <h2>Length</h2>
+  <div>
+    <label for="passLength">
+      <input type="number" id="passLength" name="passLength" value="8" min="8" max="30"> min 8, max 30
+    </label>
+  </div>
+  <h2>Number</h2>
+  <div>
+    <label for="passNumber"> 
+      <input type="number" id="passNumber" name="passNumber" value="1" min="1" max="15"> min 1, max 15
+    </label>
+  </div>
+  <div>
+    <button type="submit" id="button">Generate Password(s)</button>
+  </div>
+</form>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
