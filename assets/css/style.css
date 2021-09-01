@@ -9,3 +9,14 @@ body {
 button {
   margin-top: 2em;
 }
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.5em;
+}
+
+
+li {
+  font-family: monospace;
+}

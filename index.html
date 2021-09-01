@@ -14,13 +14,13 @@
 <form method="POST">
   <h2>Include</h2>
   <div>
-    <label for="lowerCases">
-      <input type="checkbox" id="lowerCases" name="lowerCases"> a, b, c ...
+    <label for="lower">
+      <input type="checkbox" id="lower" name="lower" checked disabled> a, b, c ...
     </label>
   </div>
   <div>
-    <label for="upperCases">
-      <input type="checkbox" id="upperCases" name="upperCases"> A, B, C ...
+    <label for="upper">
+      <input type="checkbox" id="upper" name="upper"> A, B, C ...
     </label>
   </div>
   <div>
@@ -29,26 +29,27 @@
     </label>
   </div>
   <div>
-    <label for="specialChars">
-      <input type="checkbox" id="specialChars" name="specialChars"> #, $, % ...
+    <label for="special">
+      <input type="checkbox" id="special" name="special"> #, $, % ...
     </label>
   </div>
   <h2>Length</h2>
   <div>
-    <label for="passLength">
-      <input type="number" id="passLength" name="passLength" value="8" min="8" max="30"> min 8, max 30
+    <label for="length">
+      <input type="number" id="length" name="length" value="8" min="8" max="30"> min 8, max 30
     </label>
   </div>
   <h2>Number</h2>
   <div>
-    <label for="passNumber"> 
-      <input type="number" id="passNumber" name="passNumber" value="1" min="1" max="15"> min 1, max 15
+    <label for="number"> 
+      <input type="number" id="number" name="number" value="1" min="1" max="15"> min 1, max 15
     </label>
   </div>
   <div>
     <button type="submit" id="button">Generate Password(s)</button>
   </div>
 </form>
+<ul id="list"></ul>
 <script src="assets/js/script.js"></script>
 </body>
 </html>
