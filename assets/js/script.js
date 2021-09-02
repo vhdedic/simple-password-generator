@@ -15,6 +15,7 @@ const listDOM = document.querySelector('#list');
 buttonDOM.addEventListener('click', (e) => {
   
   e.preventDefault();
+  listDOM.textContent = '';
   charsArr.push(...lowerArr);
   
   if (upperDOM.checked) {
