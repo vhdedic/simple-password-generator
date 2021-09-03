@@ -13,7 +13,6 @@ const buttonDOM = document.querySelector('#button');
 const listDOM = document.querySelector('#list');
 
 buttonDOM.addEventListener('click', (e) => {
-  
   e.preventDefault();
   listDOM.textContent = '';
   shuffle(lowerArr);
@@ -36,7 +35,16 @@ buttonDOM.addEventListener('click', (e) => {
   
   let lengthValue = lengthDOM.value;
   let numberValue = numberDOM.value;
-    
+  let randomValue = random(5);
+  let temporaryArr = [];
+
+  for (randomValue; randomValue < 8; randomValue++) {
+    temporaryArr.push(...charsArr);
+  }
+
+  charsArr = temporaryArr;
+  temporaryArr = [];
+  
   for (let i = 0; i < numberValue; i++) {
     let itemString = '';
     let listItem = document.createElement('li');
@@ -50,7 +58,7 @@ buttonDOM.addEventListener('click', (e) => {
     listItem.textContent = itemString;
     listDOM.appendChild(listItem);
   }
-
+  
   charsArr = [];
 });
 
@@ -59,13 +67,11 @@ function random(num) {
 }
 
 function shuffle(array) {
-  
   let arrayLength = array.length;
   let temporaryValue;
   let randomIndex;
 
   while (arrayLength) {
-
     randomIndex = Math.floor(Math.random() * arrayLength--);
     temporaryValue = array[arrayLength];
     array[arrayLength] = array[randomIndex];
