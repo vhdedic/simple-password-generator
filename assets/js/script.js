@@ -16,17 +16,21 @@ buttonDOM.addEventListener('click', (e) => {
   
   e.preventDefault();
   listDOM.textContent = '';
+  shuffle(lowerArr);
   charsArr.push(...lowerArr);
   
   if (upperDOM.checked) {
+    shuffle(upperArr);
     charsArr.push(...upperArr);
   }
 
   if (numbersDOM.checked) {
+    shuffle(numbersArr);
     charsArr.push(...numbersArr);
   } 
   
   if (specialDOM.checked) {
+    shuffle(specialArr);
     charsArr.push(...specialArr);
   }
   
@@ -36,6 +40,7 @@ buttonDOM.addEventListener('click', (e) => {
   for (let i = 0; i < numberValue; i++) {
     let itemString = '';
     let listItem = document.createElement('li');
+    shuffle(charsArr);
     
     for (let j = 0; j < lengthValue; j++) {
       let randomNum = random(charsArr.length);
@@ -49,4 +54,21 @@ buttonDOM.addEventListener('click', (e) => {
 
 function random(num) {
   return Math.floor(Math.random() * num);
+}
+
+function shuffle(array) {
+  
+  let arrayLength = array.length;
+  let temporaryValue;
+  let randomIndex;
+
+  while (arrayLength) {
+
+    randomIndex = Math.floor(Math.random() * arrayLength--);
+    temporaryValue = array[arrayLength];
+    array[arrayLength] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
 }
