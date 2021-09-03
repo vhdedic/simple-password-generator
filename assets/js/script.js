@@ -50,6 +50,8 @@ buttonDOM.addEventListener('click', (e) => {
     listItem.textContent = itemString;
     listDOM.appendChild(listItem);
   }
+
+  charsArr = [];
 });
 
 function random(num) {
