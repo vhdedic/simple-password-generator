@@ -9,10 +9,11 @@ const specialDOM = document.querySelector('#special');
 const lengthDOM = document.querySelector('#length');
 const numberDOM = document.querySelector('#number');
 let charsArr = [];
-const buttonDOM = document.querySelector('#button');
+const btnSubmitDOM = document.querySelector('#btnSubmit');
+const btnResetDOM = document.querySelector('#btnReset');
 const listDOM = document.querySelector('#list');
 
-buttonDOM.addEventListener('click', (e) => {
+btnSubmitDOM.addEventListener('click', (e) => {
   e.preventDefault();
   listDOM.textContent = '';
   shuffle(lowerArr);
@@ -43,6 +44,7 @@ buttonDOM.addEventListener('click', (e) => {
   }
 
   charsArr = temporaryArr;
+  randomValue = undefined;
   temporaryArr = [];
   
   for (let i = 0; i < numberValue; i++) {
@@ -60,6 +62,10 @@ buttonDOM.addEventListener('click', (e) => {
   }
   
   charsArr = [];
+});
+
+btnResetDOM.addEventListener('click', () => {
+  document.querySelector('form').reset();
 });
 
 function random(num) {
