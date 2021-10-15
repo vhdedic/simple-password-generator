@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/vhdedic/simple-password-generator/issues"
   },
-  "homepage": "https://github.com/vhdedic/simple-password-generator#readme",
+  "homepage": "https://vhdedic.github.io/simple-password-generator/",
   "devDependencies": {
     "css-loader": "^6.4.0",
     "gh-pages": "^3.2.3",
