@@ -4,7 +4,6 @@ let upperArr = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
 let lowerArr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 let numbersArr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 let specialArr = ["!", "#", "$", "%", "&", "(", ")", "*", "+", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "{", "|", "}", "~"];
-const lowerDOM = document.querySelector('#lower');
 const upperDOM = document.querySelector('#upper');
 const numbersDOM = document.querySelector('#numbers');
 const specialDOM = document.querySelector('#special');
@@ -12,7 +11,6 @@ const lengthDOM = document.querySelector('#length');
 const numberDOM = document.querySelector('#number');
 let charsArr = [];
 const btnSubmitDOM = document.querySelector('#btnSubmit');
-const btnResetDOM = document.querySelector('#btnReset');
 const listDOM = document.querySelector('#list');
 
 btnSubmitDOM.addEventListener('click', (e) => {
@@ -64,10 +62,6 @@ btnSubmitDOM.addEventListener('click', (e) => {
   }
   
   charsArr = [];
-});
-
-btnResetDOM.addEventListener('click', () => {
-  document.querySelector('form').reset();
 });
 
 function random(num) {
