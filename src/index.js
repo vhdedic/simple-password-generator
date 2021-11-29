@@ -1,4 +1,4 @@
-import './style.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 let upperArr = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 let lowerArr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -12,6 +12,7 @@ const numberDOM = document.querySelector('#number');
 let charsArr = [];
 const btnSubmitDOM = document.querySelector('#btnSubmit');
 const listDOM = document.querySelector('#list');
+listDOM.className = 'list-unstyled';
 
 btnSubmitDOM.addEventListener('click', (e) => {
   e.preventDefault();
@@ -57,6 +58,7 @@ btnSubmitDOM.addEventListener('click', (e) => {
       itemString += charsArr[randomNum];
     }
 
+    listItem.className = 'lh-lg font-monospace';
     listItem.textContent = itemString;
     listDOM.appendChild(listItem);
   }
